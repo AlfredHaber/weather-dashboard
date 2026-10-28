@@ -1,0 +1,30 @@
+:root { font-family: system-ui, Arial, sans-serif; color: #203247; background: #f2f6fb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+.container { max-width: 680px; margin: 0 auto; padding: 75px 22px 30px; }
+header { text-align: center; margin-bottom: 30px; }
+.eyebrow { color: #5687ba; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
+h1 { font-size: clamp(30px, 6vw, 42px); margin: 8px 0; letter-spacing: -1px; }
+.subtitle { color: #708094; margin: 0; }
+.search { display: flex; gap: 10px; margin-bottom: 22px; }
+input { flex: 1; min-width: 0; padding: 15px 17px; border-radius: 12px; border: 1px solid #d8e2ed; background: white; font: inherit; }
+input:focus { outline: 2px solid #76a9de; outline-offset: 1px; }
+button { border: 0; padding: 0 24px; border-radius: 12px; background: #337cc2; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+button:hover:not(:disabled) { background: #2469a9; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.weather-card { background: white; border: 1px solid #e3eaf2; border-radius: 20px; padding: 30px; box-shadow: 0 10px 35px #2443650d; text-align: center; }
+.weather-card h2 { font-size: 25px; margin: 10px 0 5px; }
+.temperature { font-size: clamp(45px, 9vw, 65px); font-weight: 750; margin-top: 12px; }
+.temperature span { font-size: .78em; }
+.condition { color: #62768a; margin: 0 0 28px; }
+.details { border-top: 1px solid #e8edf3; padding-top: 23px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.details div { display: grid; gap: 8px; }
+.details span { color: #78899b; font-size: 13px; }
+.details strong { font-size: 16px; }
+.status, .error { background: white; border-radius: 14px; padding: 25px; text-align: center; color: #597087; }
+.error { color: #a73535; background: #fff0f0; }
+.spinner { display: inline-block; width: 15px; height: 15px; margin-right: 10px; vertical-align: -3px; border: 2px solid #c5d9ee; border-top-color: #337cc2; border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+footer { text-align: center; color: #8493a5; font-size: 12px; margin-top: 28px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) { .container { padding-top: 45px; } .search { gap: 8px; } button { padding: 0 16px; } .weather-card { padding: 25px 16px; } .details { gap: 4px; } .details strong { font-size: 14px; } }
